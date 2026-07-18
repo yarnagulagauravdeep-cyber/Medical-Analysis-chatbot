@@ -1,0 +1,48 @@
+{
+  "facts": [
+    {
+      "id": "w1",
+      "topic": "sleep hydration diet",
+      "fact": "Adults generally need 7-9 hours of sleep per night for optimal cognitive and metabolic function.",
+      "source": "CDC Sleep Guidelines"
+    },
+    {
+      "id": "w2",
+      "topic": "diet nutrition protein",
+      "fact": "A balanced adult diet typically includes 0.8g of protein per kg of body weight per day, more for active individuals.",
+      "source": "USDA Dietary Guidelines"
+    },
+    {
+      "id": "w3",
+      "topic": "exercise activity cardio",
+      "fact": "At least 150 minutes of moderate aerobic activity per week is recommended for general health.",
+      "source": "WHO Physical Activity Guidelines"
+    },
+    {
+      "id": "w4",
+      "topic": "hydration water intake",
+      "fact": "General guidance suggests around 2-3 liters of water per day depending on body size, climate, and activity level.",
+      "source": "National Academies of Sciences, Engineering, and Medicine"
+    },
+    {
+      "id": "w5",
+      "topic": "stress mental wellness",
+      "fact": "Regular mindfulness or relaxation practice is associated with reduced self-reported stress levels.",
+      "source": "WHO Mental Health Guidelines"
+    }
+  ],
+  "rules": {
+    "bmi": {
+      "type": "max",
+      "threshold": 30,
+      "explanation": "BMI above 30 is classified as obese range, which increases risk for several chronic conditions.",
+      "source": "WHO BMI Classification"
+    },
+    "sleep_hours": {
+      "type": "min",
+      "threshold": 6,
+      "explanation": "Consistently sleeping under 6 hours is associated with increased health risk.",
+      "source": "CDC Sleep Guidelines"
+    }
+  }
+}

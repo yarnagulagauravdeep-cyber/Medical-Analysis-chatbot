@@ -1,0 +1,48 @@
+{
+  "facts": [
+    {
+      "id": "c1",
+      "topic": "hypertension blood pressure",
+      "fact": "Normal blood pressure is generally considered below 120/80 mmHg.",
+      "source": "American Heart Association"
+    },
+    {
+      "id": "c2",
+      "topic": "hypertension diet sodium",
+      "fact": "Reducing sodium intake to under 2,300mg per day can help manage blood pressure.",
+      "source": "CDC Hypertension Guidelines"
+    },
+    {
+      "id": "c3",
+      "topic": "hypertension exercise",
+      "fact": "Regular moderate exercise can lower systolic blood pressure by approximately 4-9 mmHg.",
+      "source": "American Heart Association"
+    },
+    {
+      "id": "c4",
+      "topic": "hypertension medication adherence",
+      "fact": "Consistent medication adherence is one of the strongest predictors of blood pressure control.",
+      "source": "CDC Hypertension Guidelines"
+    },
+    {
+      "id": "c5",
+      "topic": "hypertension monitoring readings",
+      "fact": "Home blood pressure monitoring, taken at the same time daily, gives a more reliable picture than a single clinic reading.",
+      "source": "American Heart Association"
+    }
+  ],
+  "rules": {
+    "blood_pressure_systolic": {
+      "type": "max",
+      "threshold": 140,
+      "explanation": "Systolic BP above 140 mmHg is classified as hypertension stage 2 and warrants medical attention.",
+      "source": "American Heart Association"
+    },
+    "blood_pressure_diastolic": {
+      "type": "max",
+      "threshold": 90,
+      "explanation": "Diastolic BP above 90 mmHg is classified as hypertension stage 2 and warrants medical attention.",
+      "source": "American Heart Association"
+    }
+  }
+}
