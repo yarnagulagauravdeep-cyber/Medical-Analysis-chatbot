@@ -23,11 +23,13 @@ app.use((req, res, next) => {
 app.use('/api', apiRoutes);
 
 const PORT = process.env.PORT || 5000;
-// Bind to 0.0.0.0 (not just localhost) so the frontend PC on the same
-// network can reach this server using this machine's LAN IP.
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`[🚀 MEDPULSE CORE] Engine active on: http://localhost:${PORT}`);
-  console.log('If your frontend is on a different PC, find this machine\'s LAN IP');
-  console.log('(Windows: run `ipconfig` and look for IPv4 Address, e.g. 192.168.x.x)');
-  console.log(`and point the frontend at http://<that-ip>:${PORT}/api/analyze`);
-});
+
+// Wrap the listener so it only starts a server process when running locally, not as a serverless function
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`[🚀 MEDPULSE CORE] Engine active on: http://localhost:${PORT}`);
+  });
+}
+
+// Export the application instance so Vercel can handle incoming serverless traffic
+export default app;
